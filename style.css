@@ -19,6 +19,7 @@ body {
     font-weight: 400;
     padding: 54px 50px 40px 70px;
     background: var(--violet);
+    max-width: 1440px;
 }
 
 body::before {
