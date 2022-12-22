@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --poppins: 'Poppins', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--open-sans);
+    font-weight: 400;
+    padding: 54px 50px 40px 70px;
+    background: var(--violet);
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: url('./images/bg-desktop.svg') no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#main-header img {
+    height: 50px;
+}
+
+.container {
+    display: flex;
+    padding: 80px 5px 40px 5px;
+}
+
+.main-content {
+    padding: 40px 0 0 50px;
+}
+
+.main-content_title {
+    font-family: var(--poppins);
+    font-weight: 700;
+    font-size: 38px;
+    letter-spacing: 1px;
+    color: #fff;
+    line-height: 60px;
+}
+
+.main-content_description{
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+}
+
+.register-button{
+    margin-top: 25px;
+    padding: 15px 65px;
+    font-size: 17px;
+    border-radius: 30px;
+    border: none;
+    letter-spacing: 0.5px;
+    font-family: var(--poppins);
+    color: var(--violet);
+    cursor: pointer;
+}
+
+.register-button:hover{
+    color: #fff;
+    background-color: var(--soft-magenta);
+}
+
+.footer-icons{
+    color: #fff;
+    text-align: right;
+}
+
+.footer-icons i{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.footer-icons i:hover{
+    border: 1px solid var(--soft-magenta);
+    color: var(--soft-magenta);
+}
+
+.footer-icons i:not(:last-child){
+    margin-right: 12px;
+}
+
+@media (max-width: 1200px){
+    body{
+        padding: 30px;
+    }
+
+    #main-header img{
+        height: 35px;
+    }
+
+    .container{
+        display: block;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .container img{
+        width: 100%;
+    }
+
+    .main-content{
+        padding: 42px 25px;
+    }
+
+    .main-content_title{
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .main-content_description{
+        font-size: 15px;
+    }
+
+    .register-button{
+        width: 90%;
+        padding: 12px 65px;
+        font-size: 15px;
+    }
+
+    .footer-icons{
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px){
+    body::before{
+        background: url('./images/bg-mobile.svg') no-repeat center right;
+        width: 100%;
+        background-size: cover;
+    }
+}
