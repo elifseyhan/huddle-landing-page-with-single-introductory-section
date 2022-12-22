@@ -28,27 +28,27 @@ body::before {
     left: 0;
     bottom: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     background: url('./images/bg-desktop.svg') no-repeat center;
     background-size: cover;
     z-index: -1;
     overflow: hidden;
 }
 
-#main-header img {
+header img {
     height: 50px;
 }
 
-.container {
+main {
     display: flex;
     padding: 80px 5px 40px 5px;
 }
 
-.main-content {
+section {
     padding: 40px 0 0 50px;
 }
 
-.main-content_title {
+h1 {
     font-family: var(--poppins);
     font-weight: 700;
     font-size: 38px;
@@ -57,14 +57,14 @@ body::before {
     line-height: 60px;
 }
 
-.main-content_description{
+p{
     padding-top: 20px;
     font-size: 18px;
     line-height: 27px;
     color: #fff;
 }
 
-.register-button{
+button{
     margin-top: 25px;
     padding: 15px 65px;
     font-size: 17px;
@@ -73,20 +73,25 @@ body::before {
     letter-spacing: 0.5px;
     font-family: var(--poppins);
     color: var(--violet);
+    transition: all .5s ease;
     cursor: pointer;
 }
 
-.register-button:hover{
+button:hover{
     color: #fff;
     background-color: var(--soft-magenta);
 }
 
-.footer-icons{
-    color: #fff;
+footer{
     text-align: right;
 }
 
-.footer-icons i{
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer i{
     border: 1px solid rgb(255, 255, 255);
     border-radius: 50%;
     padding: 10px;
@@ -96,14 +101,15 @@ body::before {
     text-align: center;
     line-height: 18px;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
-.footer-icons i:hover{
+footer i:hover{
     border: 1px solid var(--soft-magenta);
     color: var(--soft-magenta);
 }
 
-.footer-icons i:not(:last-child){
+footer a:not(:last-child){
     margin-right: 12px;
 }
 
@@ -112,40 +118,40 @@ body::before {
         padding: 30px;
     }
 
-    #main-header img{
+    header img{
         height: 35px;
     }
 
-    .container{
+    main{
         display: block;
         text-align: center;
         padding-top: 50px;
     }
 
-    .container img{
+    main img{
         width: 100%;
     }
 
-    .main-content{
+    section{
         padding: 42px 25px;
     }
 
-    .main-content_title{
+    h1{
         font-size: 20px;
         line-height: 35px;
     }
 
-    .main-content_description{
+    p{
         font-size: 15px;
     }
 
-    .register-button{
+    button{
         width: 90%;
         padding: 12px 65px;
         font-size: 15px;
     }
 
-    .footer-icons{
+    footer{
         text-align: center;
     }
 }
